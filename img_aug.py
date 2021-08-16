@@ -14,10 +14,10 @@ target_dir = datasets_root_dir + 'train_cropped_augmented/'
 makedir(target_dir)
 folders = [os.path.join(dir, folder) for folder in next(os.walk(dir))[1]]
 target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(dir))[1]]
-
+#"./home/eegroup/eefrank/b06502162/My_ProtoPNet/"
 for i in range(len(folders)):
-    fd = "./home/eegroup/eefrank/b06502162/My_ProtoPNet/"+(folders[i])[2:]
-    tfd = "./home/eegroup/eefrank/b06502162/My_ProtoPNet/"+(target_folders[i])[2:]
+    fd = (folders[i])
+    tfd = (target_folders[i])
     print("this is : ",fd,tfd)
     # rotation
     p = Augmentor.Pipeline(source_directory=fd, output_directory=tfd)
