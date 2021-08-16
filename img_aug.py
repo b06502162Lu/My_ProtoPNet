@@ -16,9 +16,9 @@ folders = [os.path.join(dir, folder) for folder in next(os.walk(dir))[1]]
 target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(dir))[1]]
 
 for i in range(len(folders)):
-    fd = "./home/eegroup/eefrank/b06502162/My_ProtoPNet/"+folders[i]
-    tfd = "./home/eegroup/eefrank/b06502162/My_ProtoPNet/"+target_folders[i]
-    print("this is : ",fd)
+    fd = "./home/eegroup/eefrank/b06502162/My_ProtoPNet/"+(folders[i])[2:]
+    tfd = "./home/eegroup/eefrank/b06502162/My_ProtoPNet/"+(target_folders[i])[2:]
+    print("this is : ",fd,tfd)
     # rotation
     p = Augmentor.Pipeline(source_directory=fd, output_directory=tfd)
     p.rotate(probability=1, max_left_rotation=15, max_right_rotation=15)
