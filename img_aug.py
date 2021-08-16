@@ -15,11 +15,11 @@ folders = list()
 target_folders = list()
 for name in os.listdir(dir_) :
     path = os.path.join(dir_,name)
-    list.append(path)
+    folders.append(path)
 
 for name in os.listdir(target_dir) :
     path = os.path.join(target_dir,name)
-    list.append(path)
+    target_folders.append(path)
 
 for i in range(10) :
     print("This is folder ",i," ",folders[i])
