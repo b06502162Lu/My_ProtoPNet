@@ -18,6 +18,11 @@ target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(di
 for i in range(len(folders)):
     fd = folders[i]
     tfd = target_folders[i]
+
+    print("This is fd:  ",fd)
+    print("This is tfd:  ",tfd)
+    print("\n\n\n\n")
+
     # rotation
     p = Augmentor.Pipeline(source_directory=fd, output_directory=tfd)
     p.rotate(probability=1, max_left_rotation=15, max_right_rotation=15)
