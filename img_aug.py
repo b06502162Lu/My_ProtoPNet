@@ -9,13 +9,13 @@ def makedir(path):
 
 datasets_root_dir = './datasets/cub200_cropped/'
 dir = datasets_root_dir + 'train_cropped/'
-target_dir = datasets_root_dir + 'train_cropped_augmented/'
+target_dir = "/home/eegroup/eefrank/b06502162/My_ProtoPNet/"+datasets_root_dir + 'train_cropped_augmented/'
 
 #os.mkdir(target_dir)
 folders = [os.path.join(dir, folder) for folder in next(os.walk(dir))[1]]
 target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(dir))[1]]
 
-print(target_folders)
+#print(target_folders)
 
 for i in range(len(folders)):
     #print("i : ",i,"   ",folders[i],"\n\n")
