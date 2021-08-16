@@ -11,12 +11,16 @@ datasets_root_dir = './datasets/cub200_cropped/'
 dir = datasets_root_dir + 'train_cropped/'
 target_dir = datasets_root_dir + 'train_cropped_augmented/'
 
-makedir(target_dir)
-folders = [os.path.join(dir, folder) for folder in next(os.walk(dir))[1]]
-target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(dir))[1]]
+#makedir(target_dir)
+#folders = [os.path.join(dir, folder) for folder in next(os.walk(dir))[0]]
+#target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(dir))[0]]
 print("This is folder:  ",folders)
-print("This is target:  ",target_folders)
+#print("This is target:  ",target_folders)
 print("\n\n\n\n")
+
+
+
+
 for i in range(len(folders)):
     fd = folders[i]
     tfd = target_folders[i]
