@@ -11,7 +11,7 @@ datasets_root_dir = './datasets/cub200_cropped/'
 dir = datasets_root_dir + 'train_cropped/'
 target_dir = datasets_root_dir + 'train_cropped_augmented/'
 
-makedir(target_dir)
+os.mkdir(target_dir)
 folders = [os.path.join(dir, folder) for folder in next(os.walk(dir))[1]]
 target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(dir))[1]]
 
@@ -20,6 +20,7 @@ for i in range(len(folders)):
     print(target_folders[i])
     fd = folders[i]
     tfd = target_folders[i]
+    os.mkdir(tfd)
     # rotation
     p = Augmentor.Pipeline(source_directory=fd, output_directory=tfd)
     p.rotate(probability=1, max_left_rotation=15, max_right_rotation=15)
