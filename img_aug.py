@@ -22,7 +22,8 @@ for i in range(len(folders)):
     #print("i : ",i,"   ",folders[i],"\n\n")
     #print(target_folders[i])
     fd = folders[i]
-    tfd = "./home/eegroup/eefrank/b06502162/My_ProtoPNet/"+(target_folders[i])[2:]
+    #tfd = "./home/eegroup/eefrank/b06502162/My_ProtoPNet/"+(target_folders[i])[2:]
+    tfd = "./home/eegroup/eefrank/b06502162/My_ProtoPNet/datasets/cub200_cropped/train_cropped_augmented"
     print("fd:  ",fd)
     print("tfd:  ",tfd)
     
