@@ -16,6 +16,7 @@ folders = [os.path.join(dir, folder) for folder in next(os.walk(dir))[1]]
 target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(dir))[1]]
 
 for i in range(len(folders)):
+    print("i : ",i)
     fd = folders[i]
     tfd = target_folders[i]
     # rotation
