@@ -18,6 +18,7 @@ target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(di
 for i in range(len(folders)):
     fd = "eefrank/b06502162/My_ProtoPNet/"+(folders[i])[2:]
     tfd = "eefrank/b06502162/My_ProtoPNet/"+(target_folders[i])[2:]
+    os.mkdir(tfd)
     print("this is : ",fd,tfd)
     # rotation
     p = Augmentor.Pipeline(source_directory=fd, output_directory=tfd)
