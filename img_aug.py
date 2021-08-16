@@ -15,7 +15,7 @@ target_dir = datasets_root_dir + 'train_cropped_augmented/'
 folders = [os.path.join(dir, folder) for folder in next(os.walk(dir))[1]]
 target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(dir))[1]]
 for i in range(10) :
-    print("This is folder ",i,  ",folders[i])
+    print("This is folder ",i,",folders[i])
 print("final",folder[-1])
 #print("This is target:  ",target_folders)
 print("\n\n\n\n")
