@@ -43,6 +43,8 @@ target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(di
 for i in range(len(folders)):
     fd = folders[i]
     tfd = img_dir[i]
+    print(fd)
+    print(tfd)
     # rotation
     p = Augmentor.Pipeline(source_directory=fd, output_directory=tfd)
     p.rotate(probability=1, max_left_rotation=15, max_right_rotation=15)
@@ -76,4 +78,3 @@ for i in range(len(folders)):
     tfd = target_dir
     cmd = "mv "+fd+" "+tfd
     fp = os.popen(cmd)
-    
