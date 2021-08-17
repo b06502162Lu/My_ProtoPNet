@@ -11,7 +11,7 @@ folders = []
 
 for i in os.listdir(data_dir) :
     folders.append(data_dir+i+"/")
-print(folders)
+print(len(folders))
 
 """
 folders = [os.path.join(dir, folder) for folder in next(os.walk(data_dir))[1]]
