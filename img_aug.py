@@ -1,17 +1,17 @@
 import Augmentor
 import os
 
-p = Augmentor.Pipeline(source_directory="datasets/cub200_cropped/train_cropped/002.Laysan_Albatross/",output_directory="weridname")
+#p = Augmentor.Pipeline(source_directory="datasets/cub200_cropped/train_cropped/002.Laysan_Albatross/",output_directory="weridname")
 """
 
 data_dir = "./datasets/cub200_cropped/train_cropped/" 
 target_dir = "./datasets/cub200_cropped/train_cropped_augmented/" 
-
+"""
 #print(len(os.listdir(data_dir)))
 folders = []
 img_dir = []
-for i in os.listdir(data_dir) :
-    folders.append(data_dir+i+"/")
+for i in os.listdir(os.getcwd()) :
+    folders.append(i)
     img_dir.append(i)
 #print(len(folders))
 
@@ -50,6 +50,8 @@ for i in range(len(folders)):
     #for i in range(10):
     #    p.process()
     #del p
+"""
+"""
 for i in range(len(folders)):
     fd = folders[i]+img_dir[i]
     tfd = target_dir
