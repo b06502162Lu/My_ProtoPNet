@@ -1,6 +1,6 @@
 #!/bin/bash
-#PBS -l select=1:ncpus=8:ngpus=1  ###請完全照樣輸入，在課程帳號環境沒有其他選項
-#PBS -q ee ###請完全照樣輸入，只允許使用ee
+#PBS -l select=1:ncpus=8:ngpus=1  
+#PBS -q ee 
 
 source activate b06502162
 cd $PBS_O_WORKDIR
