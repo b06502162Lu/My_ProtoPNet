@@ -6,7 +6,12 @@ import os
 data_dir = "./datasets/cub200_cropped/train_cropped/" 
 target_dir = "./datasets/cub200_cropped/train_cropped_augmented/" 
 
-print(os.listdir(data_dir))
+print(len(os.listdir(data_dir)))
+folders = []
+
+for i in os.listdir(data_dir) :
+    folders.append(data_dir+i+"/")
+print(folders)
 
 """
 folders = [os.path.join(dir, folder) for folder in next(os.walk(data_dir))[1]]
