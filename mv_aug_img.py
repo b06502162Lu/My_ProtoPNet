@@ -4,7 +4,7 @@ img_dir = []
 for i in os.listdir(os.getcwd()) :
     folders.append(i)
     img_dir.append(i)
-
+#l
 for i in range(len(folders)):
     
     fd = folders[i]+"/"+img_dir[i]
