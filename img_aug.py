@@ -1,11 +1,24 @@
 import Augmentor
 import os
+
+
+
+data_dir = "./datasets/cub200_cropped/train_cropped/" 
+target_dir = "./datasets/cub200_cropped/train_cropped_augmented/" 
+
+folders = [os.path.join(dir, folder) for folder in next(os.walk(data_dir))[1]]
+target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(data_dir))[1]]
+print(len(folders),folders[0],folders[-1])
+print(len(target_folders),target_folders[0],target_folders[-1])
+
+"""
 def makedir(path):
     '''
     if path does not exist in the file system, create it
     '''
     if not os.path.exists(path):
         os.makedirs(path)
+
 
 datasets_root_dir = './datasets/cub200_cropped/'
 dir = datasets_root_dir + 'train_cropped/'
@@ -15,6 +28,8 @@ makedir(target_dir)
 folders = [os.path.join(dir, folder) for folder in next(os.walk(dir))[1]]
 target_folders = [os.path.join(target_dir, folder) for folder in next(os.walk(dir))[1]]
 #print(folders)
+"""
+"""
 for i in range(len(folders)):
     fd = folders[i]
     tfd = target_folders[i]
@@ -47,3 +62,5 @@ for i in range(len(folders)):
     #for i in range(10):
     #    p.process()
     #del p
+
+    """
