@@ -11,6 +11,8 @@ target_dir = "./datasets/cub200_cropped/train_cropped_augmented/"
 folders = []
 img_dir = []
 for i in os.listdir(os.getcwd()) :
+    if i == "img_aug.py" :
+        continue
     folders.append(i)
     img_dir.append(i)
 #print(len(folders))
