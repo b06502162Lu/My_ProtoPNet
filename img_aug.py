@@ -51,8 +51,3 @@ for i in range(len(folders)):
     #    p.process()
     #del p
 
-for i in range(len(folders)):
-    fd = folders[i]+img_dir[i]
-    tfd = target_dir
-    cmd = "mv "+fd+" "+tfd
-    fp = os.popen(cmd)
