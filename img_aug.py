@@ -1,7 +1,7 @@
 import Augmentor
 import os
 
-p = Augmentor.Pipeline(source_directory="./datasets/cub200_cropped/train_cropped/002.Laysan_Albatross/",output_directory="weridname")
+p = Augmentor.Pipeline(source_directory="datasets/cub200_cropped/train_cropped/002.Laysan_Albatross/",output_directory="weridname")
 """
 
 data_dir = "./datasets/cub200_cropped/train_cropped/" 
