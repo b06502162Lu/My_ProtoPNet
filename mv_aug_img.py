@@ -6,6 +6,8 @@ for i in os.listdir(os.getcwd()) :
     img_dir.append(i)
 
 for i in range(len(folders)):
+    
     fd = folders[i]+img_dir[i]
+    print(folders[i],"  :  ",len(fd))
     cmd = "mv "+fd+" "+"../train_cropped_augmented"
     fp = os.popen(cmd)

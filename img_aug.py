@@ -29,6 +29,7 @@ for i in range(len(folders)):
     for i in range(10):
         p.process()
     del p
+    print("finish rotation")
     # skew
     p = Augmentor.Pipeline(source_directory=fd, output_directory=tfd)
     p.skew(probability=1, magnitude=0.2)  # max 45 degrees
@@ -36,6 +37,7 @@ for i in range(len(folders)):
     for i in range(10):
         p.process()
     del p
+    print("finish skew")
     # shear
     p = Augmentor.Pipeline(source_directory=fd, output_directory=tfd)
     p.shear(probability=1, max_shear_left=10, max_shear_right=10)
@@ -43,6 +45,7 @@ for i in range(len(folders)):
     for i in range(10):
         p.process()
     del p
+    print("finish shear")
     # random_distortion
     #p = Augmentor.Pipeline(source_directory=fd, output_directory=tfd)
     #p.random_distortion(probability=1.0, grid_width=10, grid_height=10, magnitude=5)
@@ -50,4 +53,4 @@ for i in range(len(folders)):
     #for i in range(10):
     #    p.process()
     #del p
-
+print("finish image augmentation")
