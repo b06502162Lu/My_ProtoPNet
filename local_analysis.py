@@ -43,7 +43,7 @@ test_image_label = args.imgclass[0] #15
 test_image_path = os.path.join(test_image_dir, test_image_name)
 
 # load the model
-check_test_accu = False
+check_test_accu = True   #default False
 
 load_model_dir = args.modeldir[0] #'./saved_models/vgg19/003/'
 load_model_name = args.model[0] #'10_18push0.7822.pth'
