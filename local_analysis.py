@@ -74,7 +74,7 @@ log('experiment run: ' + experiment_run)
 
 
 
-ppnet = torch.load(load_model_path)
+ppnet = torch.load_state_dict(load_model_path)
 ppnet = ppnet.cuda()
 ppnet_multi = torch.nn.DataParallel(ppnet)
 
