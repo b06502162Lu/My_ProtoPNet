@@ -75,7 +75,6 @@ log('experiment run: ' + experiment_run)
 
 
 ppnet = torch.load(load_model_path)
-print(ppnet.CUDA_VISIBLE_DEVICES)
 ppnet = ppnet.cuda()
 ppnet_multi = torch.nn.DataParallel(ppnet)
 
